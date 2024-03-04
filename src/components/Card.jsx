@@ -9,7 +9,6 @@ const Card = (props) => {
 	return (
 		<>
 			<div id="card" onClick={props.toggleCard}>
-				<div id="card-number">{props.index + 1}</div>
 				<div id="card-inner" className={props.showAnswer ? "flipped" : ""}>
 					<div className="front">
 						{props.showDefault

@@ -11,16 +11,16 @@ Time spent: **3** hours spent in total
 The following **required** functionality is completed:
 
 -   [✅] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
--   [ ] **A single card at a time is displayed, only showing one of the components of the information pair**
--   [ ] **A list of card pairs is created**
--   [ ] **Clicking on the card shows the corresponding component of the information pair**
--   [ ] **Clicking the next button displays a random new card**
+-   [✅] **A single card at a time is displayed, only showing one of the components of the information pair**
+-   [✅] **A list of card pairs is created**
+-   [✅] **Clicking on the card shows the corresponding component of the information pair**
+-   [✅] **Clicking the next button displays a random new card**
 
 The following **optional** features are implemented:
 
 -   [ ] Cards contains images in addition to or in place of text
 -   [ ] Cards have different visual styles such as color based on their category
--   [ ] _visual style implemented_
+-   [✅] Cards have a flipped card animation attacthed to it on click of a card
 
 The following **additional** features are implemented:
 

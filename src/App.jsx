@@ -19,12 +19,14 @@ function App() {
 	const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
 	const nextCard = () => {
+		let newIndex;
 		if (showDefault) {
 			setShowDefault(false);
-		} else if (currentCardIndex < blockchain_data.length - 1) {
-			setCurrentCardIndex(currentCardIndex + 1);
 		} else {
-			setCurrentCardIndex(0);
+			do {
+				newIndex = Math.floor(Math.random() * blockchain_data.length);
+			} while (newIndex === currentCardIndex);
+			setCurrentCardIndex(newIndex);
 		}
 
 		setShowAnswer(false);
