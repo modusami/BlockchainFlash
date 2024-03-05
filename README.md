@@ -18,8 +18,8 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
--   [ ] Cards contains images in addition to or in place of text
--   [ ] Cards have different visual styles such as color based on their category
+-   [✅] Cards contains images in addition to or in place of text
+-   [✅] Cards have different visual styles such as color based on their category
 -   [✅] Cards have a flipped card animation attacthed to it on click of a card
 
 The following **additional** features are implemented:

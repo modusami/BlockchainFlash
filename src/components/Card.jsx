@@ -1,6 +1,6 @@
 import "../styles/flashcard.css";
-import { useState } from "react";
 import blockchain_data from "../data/blockchain.js";
+import bitcoin from "/bitcoin.png";
 
 const Card = (props) => {
 	const answers = blockchain_data.map((value) => value.answer);
@@ -11,6 +11,7 @@ const Card = (props) => {
 			<div id="card" onClick={props.toggleCard}>
 				<div id="card-inner" className={props.showAnswer ? "flipped" : ""}>
 					<div className="front">
+						<img id="card-img" src={bitcoin} alt="bitcoin-image" />
 						{props.showDefault
 							? "Click here to show the back of the card"
 							: questions[props.index]}
