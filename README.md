@@ -22,19 +22,15 @@ The following **optional** features are implemented:
 -   [✅] Cards have different visual styles such as color based on their category
 -   [✅] Cards have a flipped card animation attacthed to it on click of a card
 
-The following **additional** features are implemented:
-
--   [ ] List anything else that you added to improve the site's functionality!
-
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='/submission.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 
-GIF created with ...
+GIF created with [Kap](https://getkap.co/) for macOS
 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
@@ -43,11 +39,11 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+The challenges I faced was with CSS, to enable the card animations or the flashcard flipping animations. Everything else was fine.
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2023 Michael-Andre Odusami
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
