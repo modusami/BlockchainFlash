@@ -4,9 +4,12 @@ const Card = (props) => {
 	return (
 		<>
 			<div id="card" onClick={props.toggleCard} className={props.isCorrect}>
-				<div onClick={props.switchCards} id="left-card-arrow" className="card-arrow">
-					<i className="fa-solid fa-arrow-left"></i>
-				</div>
+				{!props.showDefault && (
+					<div onClick={props.switchCards} id="left-card-arrow" className="card-arrow">
+						<i className="fa-solid fa-arrow-left"></i>
+					</div>
+				)}
+
 				<div onClick={props.switchCards} id="right-card-arrow" className="card-arrow">
 					<i className="fa-solid fa-arrow-right"></i>
 				</div>
