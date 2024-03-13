@@ -44,6 +44,8 @@
 	position: absolute;
 	bottom: 0;
 	width: 15%;
+	text-align: center;
+	padding: 1rem;
 }
 
 #left-card-arrow {
