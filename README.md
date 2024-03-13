@@ -24,7 +24,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
--   [ ] List anything else that you added to improve the site's functionality!
+-   [✅] Show input box after the introduction cards and hide it at intro screen
 
 ## Video Walkthrough
 
