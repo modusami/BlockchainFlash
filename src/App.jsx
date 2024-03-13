@@ -29,8 +29,15 @@ function App() {
 	// show whether the input box appears
 	const [showInputBox, setInputBox] = useState(false);
 
+	// handles submitting an answer
+	const [correctStatus, setCorrectStatus] = useState("");
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		if (answer == answers[currentCardIndex]) {
+			setCorrectStatus("correct");
+		} else {
+			setCorrectStatus("wrong");
+		}
 	};
 
 	// for switching cards
@@ -38,6 +45,7 @@ function App() {
 		e.stopPropagation();
 		setShowAnswer(false);
 		setInputBox(true);
+		setCorrectStatus("");
 		if (!showDefault) {
 			if (e.target.className.includes("left")) {
 				// go backwards, if you reach last card, restart
@@ -68,6 +76,7 @@ function App() {
 					switchCards={switchCards}
 					questions={questions[currentCardIndex]}
 					answers={answers[currentCardIndex]}
+					isCorrect={correctStatus}
 				/>
 				<InputAnswer
 					answer={answer}

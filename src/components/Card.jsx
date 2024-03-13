@@ -3,7 +3,7 @@ import "../styles/flashcard.css";
 const Card = (props) => {
 	return (
 		<>
-			<div id="card" onClick={props.toggleCard}>
+			<div id="card" onClick={props.toggleCard} className={props.isCorrect}>
 				<div onClick={props.switchCards} id="left-card-arrow" className="card-arrow">
 					<i className="fa-solid fa-arrow-left"></i>
 				</div>
