@@ -16,6 +16,21 @@ function App() {
 		setShowAnswer(!showAnswer);
 	};
 
+	const switchCards = (e) => {
+		e.stopPropagation();
+		setShowDefault(false);
+		if (e.target.className.includes("left")) {
+			// go backwards, if you reach last card, restart
+			currentCardIndex > 0
+				? setCurrentCardIndex(currentCardIndex - 1)
+				: setCurrentCardIndex(blockchain_data.length - 1);
+		} else {
+			currentCardIndex < blockchain_data.length
+				? setCurrentCardIndex(0)
+				: setCurrentCardIndex(currentCardIndex + 1);
+		}
+	};
+
 	const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
 	return (
@@ -28,6 +43,7 @@ function App() {
 					showDefault={showDefault}
 					toggleCard={toggleCard}
 					showAnswer={showAnswer}
+					switchCards={switchCards}
 				/>
 			</div>
 		</>
