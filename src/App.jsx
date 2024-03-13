@@ -25,9 +25,9 @@ function App() {
 				? setCurrentCardIndex(currentCardIndex - 1)
 				: setCurrentCardIndex(blockchain_data.length - 1);
 		} else {
-			currentCardIndex < blockchain_data.length
-				? setCurrentCardIndex(0)
-				: setCurrentCardIndex(currentCardIndex + 1);
+			currentCardIndex < blockchain_data.length - 1
+				? setCurrentCardIndex(currentCardIndex + 1)
+				: setCurrentCardIndex(0);
 		}
 	};
 
