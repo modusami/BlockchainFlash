@@ -17,6 +17,13 @@ function App() {
 		setShowAnswer(!showAnswer);
 	};
 
+	// for the input box
+	const [answer, setAnswer] = useState("");
+	const handleAnswer = (e) => {
+		setAnswer(e.target.value);
+	};
+
+	// for switching cards
 	const switchCards = (e) => {
 		e.stopPropagation();
 		setShowAnswer(false);
@@ -50,7 +57,7 @@ function App() {
 					showAnswer={showAnswer}
 					switchCards={switchCards}
 				/>
-				<InputAnswer />
+				<InputAnswer answer={answer} handleAnswer={handleAnswer} />
 			</div>
 		</>
 	);
