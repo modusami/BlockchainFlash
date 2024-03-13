@@ -1,6 +1,6 @@
 # Web Development Project 3 - _BlockchainFlash_
 
-Submitted by: **Michael-Andre Odusamie**
+Submitted by: **Michael-Andre Odusami**
 
 This web app: **gives users the chance to reinforce their knowledge of blockhain through the use of flashcards with the addition of being able to enter in potential correct solutions to each question on the flashcard!**
 
