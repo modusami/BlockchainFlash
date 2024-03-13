@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./components/Header.jsx";
 import Card from "./components/Card.jsx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import blockchain_data from "./data/blockchain.js";
 import InputAnswer from "./components/InputAnswer.jsx";
 
@@ -30,22 +30,22 @@ function App() {
 	const [showInputBox, setInputBox] = useState(false);
 
 	// handles submitting an answer
-	const [correctStatus, setCorrectStatus] = useState("");
+	const [correctStatus, setCorrectStatus] = useState("none");
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		if (answer == answers[currentCardIndex]) {
+		if (answer.toLowerCase() == answers[currentCardIndex].toLowerCase()) {
 			setCorrectStatus("correct");
 		} else {
 			setCorrectStatus("wrong");
 		}
+		setShowAnswer(false);
 	};
 
 	// for switching cards
 	const switchCards = (e) => {
 		e.stopPropagation();
-		setShowAnswer(false);
-		setInputBox(true);
-		setCorrectStatus("");
+		setCorrectStatus("none");
+
 		if (!showDefault) {
 			if (e.target.className.includes("left")) {
 				// go backwards, if you reach last card, restart
@@ -59,6 +59,8 @@ function App() {
 			}
 		}
 
+		setShowAnswer(false);
+		setInputBox(true);
 		setShowDefault(false);
 	};
 
