@@ -1,36 +1,40 @@
-# Web Development Project 2 - _BlockchainFlash_
+# Web Development Project 3 - _BlockchainFlash_
 
-Submitted by: **Michael-Andre Odusami**
+Submitted by: **Michael-Andre Odusamie**
 
-This web app: **gives users the chance to reinforce their knowledge of blockhain through the use of flashcards!**
+This web app: **gives users the chance to reinforce their knowledge of blockhain through the use of flashcards with the addition of being able to enter in potential correct solutions to each question on the flashcard!**
 
-Time spent: **3** hours spent in total
+Time spent: **3.5** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
--   [✅] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
--   [✅] **A single card at a time is displayed, only showing one of the components of the information pair**
--   [✅] **A list of card pairs is created**
--   [✅] **Clicking on the card shows the corresponding component of the information pair**
--   [✅] **Clicking the next button displays a random new card**
+-   [ ] **The user can enter their guess in a box before seeing the flipside of the card**
+-   [ ] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
+-   [ ] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
+-   [ ] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
 
 The following **optional** features are implemented:
 
--   [✅] Cards contains images in addition to or in place of text
--   [✅] Cards have different visual styles such as color based on their category
--   [✅] Cards have a flipped card animation attacthed to it on click of a card
+-   [ ] A shuffle button is used to randomize the order of the cards
+-   [ ] A user's answer may be counted as correct even when it is slightly different from the target answer
+-   [ ] A counter displays the user's current and longest streak of correct responses
+-   [ ] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
+
+The following **additional** features are implemented:
+
+-   [ ] List anything else that you added to improve the site's functionality!
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented required features:
+Here's a walkthrough of implemented user stories:
 
-<img src='/submission.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 
-GIF created with [Kap](https://getkap.co/) for macOS
+GIF created with ...
 
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
@@ -39,11 +43,11 @@ GIF created with [Kap](https://getkap.co/) for macOS
 
 ## Notes
 
-The challenges I faced was with CSS, to enable the card animations or the flashcard flipping animations. Everything else was fine.
+Describe any challenges encountered while building the app.
 
 ## License
 
-    Copyright 2023 Michael-Andre Odusami
+    Copyright 2024 Michael-Andre Odusami
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
