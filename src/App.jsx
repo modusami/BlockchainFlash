@@ -18,6 +18,7 @@ function App() {
 
 	const switchCards = (e) => {
 		e.stopPropagation();
+		setShowAnswer(false);
 		if (!showDefault) {
 			if (e.target.className.includes("left")) {
 				// go backwards, if you reach last card, restart
