@@ -6,6 +6,9 @@ import blockchain_data from "./data/blockchain.js";
 import InputAnswer from "./components/InputAnswer.jsx";
 
 function App() {
+	const answers = blockchain_data.map((value) => value.answer);
+	const questions = blockchain_data.map((value) => value.question);
+
 	// State to show default screen
 	const [showDefault, setShowDefault] = useState(true);
 
@@ -23,10 +26,18 @@ function App() {
 		setAnswer(e.target.value);
 	};
 
+	// show whether the input box appears
+	const [showInputBox, setInputBox] = useState(false);
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+	};
+
 	// for switching cards
 	const switchCards = (e) => {
 		e.stopPropagation();
 		setShowAnswer(false);
+		setInputBox(true);
 		if (!showDefault) {
 			if (e.target.className.includes("left")) {
 				// go backwards, if you reach last card, restart
@@ -51,13 +62,19 @@ function App() {
 			<div id="container">
 				<Header currentCard={currentCardIndex} />
 				<Card
-					index={currentCardIndex}
 					showDefault={showDefault}
 					toggleCard={toggleCard}
 					showAnswer={showAnswer}
 					switchCards={switchCards}
+					questions={questions[currentCardIndex]}
+					answers={answers[currentCardIndex]}
 				/>
-				<InputAnswer answer={answer} handleAnswer={handleAnswer} />
+				<InputAnswer
+					answer={answer}
+					handleAnswer={handleAnswer}
+					handleSubmit={handleSubmit}
+					showBox={showInputBox}
+				/>
 			</div>
 		</>
 	);
