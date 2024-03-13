@@ -29,6 +29,43 @@
 	width: 5%;
 } */
 
+.card-arrow {
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+.card-arrow i {
+	color: inherit;
+	font-weight: 900;
+}
+
+#left-card-arrow,
+#right-card-arrow {
+	position: absolute;
+	bottom: 0;
+	width: 15%;
+}
+
+#left-card-arrow {
+	left: 0;
+}
+
+#left-card-arrow::after {
+	content: "Back";
+	font-size: 1rem;
+	display: block;
+}
+
+#right-card-arrow {
+	right: 0;
+}
+
+#right-card-arrow:after {
+	font-size: 1rem;
+	display: block;
+	content: "Next";
+}
+
 @media screen and (max-width: 700px) {
 	.front,
 	.back {

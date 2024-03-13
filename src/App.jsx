@@ -18,20 +18,6 @@ function App() {
 
 	const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
-	const nextCard = () => {
-		let newIndex;
-		if (showDefault) {
-			setShowDefault(false);
-		} else {
-			do {
-				newIndex = Math.floor(Math.random() * blockchain_data.length);
-			} while (newIndex === currentCardIndex);
-			setCurrentCardIndex(newIndex);
-		}
-
-		setShowAnswer(false);
-	};
-
 	return (
 		<>
 			<div id="shade-bg"></div>
@@ -43,9 +29,6 @@ function App() {
 					toggleCard={toggleCard}
 					showAnswer={showAnswer}
 				/>
-				<button onClick={nextCard} id="btn">
-					Next Card
-				</button>
 			</div>
 		</>
 	);

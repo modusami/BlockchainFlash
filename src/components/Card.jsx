@@ -11,6 +11,12 @@ const Card = (props) => {
 			<div id="card" onClick={props.toggleCard}>
 				<div id="card-inner" className={props.showAnswer ? "flipped" : ""}>
 					<div className="front">
+						<div id="left-card-arrow" className="card-arrow">
+							<i class="fa-solid fa-arrow-left"></i>
+						</div>
+						<div id="right-card-arrow" className="card-arrow">
+							<i class="fa-solid fa-arrow-right"></i>
+						</div>
 						{/* <img id="card-img" src={bitcoin} alt="bitcoin-image" /> */}
 						{props.showDefault
 							? "Click here to show the back of the card"
