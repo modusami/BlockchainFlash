@@ -1,10 +1,6 @@
 import "../styles/flashcard.css";
-import blockchain_data from "../data/blockchain.js";
 
 const Card = (props) => {
-	const answers = blockchain_data.map((value) => value.answer);
-	const questions = blockchain_data.map((value) => value.question);
-
 	return (
 		<>
 			<div id="card" onClick={props.toggleCard}>
@@ -19,12 +15,10 @@ const Card = (props) => {
 						{/* <img id="card-img" src={bitcoin} alt="bitcoin-image" /> */}
 						{props.showDefault
 							? "Click here to show the back of the card"
-							: questions[props.index]}
+							: props.questions}
 					</div>
 					<div className="back">
-						{props.showDefault
-							? "Click the Next Arrow below to begin"
-							: answers[props.index]}
+						{props.showDefault ? "Click the Next Arrow below to begin" : props.answers}
 					</div>
 				</div>
 			</div>
