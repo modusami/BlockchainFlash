@@ -1,5 +1,4 @@
 #shade-bg {
-	background-color: rgb(0, 0, 0, 0.7);
 	width: 100vw;
 	height: 100%;
 	position: fixed;
@@ -26,7 +25,8 @@
 	border: none;
 	border-radius: 10px;
 	background-color: transparent;
-	color: white;
+	color: black;
+	border: 2px solid black;
 }
 
 #btn:hover {
@@ -34,5 +34,5 @@
 }
 
 #btn:active {
-	color: yellow;
+	color: red;
 }
