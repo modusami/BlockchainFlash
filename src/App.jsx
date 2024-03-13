@@ -18,17 +18,20 @@ function App() {
 
 	const switchCards = (e) => {
 		e.stopPropagation();
-		setShowDefault(false);
-		if (e.target.className.includes("left")) {
-			// go backwards, if you reach last card, restart
-			currentCardIndex > 0
-				? setCurrentCardIndex(currentCardIndex - 1)
-				: setCurrentCardIndex(blockchain_data.length - 1);
-		} else {
-			currentCardIndex < blockchain_data.length - 1
-				? setCurrentCardIndex(currentCardIndex + 1)
-				: setCurrentCardIndex(0);
+		if (!showDefault) {
+			if (e.target.className.includes("left")) {
+				// go backwards, if you reach last card, restart
+				currentCardIndex > 0
+					? setCurrentCardIndex(currentCardIndex - 1)
+					: setCurrentCardIndex(0);
+			} else {
+				currentCardIndex < blockchain_data.length - 1
+					? setCurrentCardIndex(currentCardIndex + 1)
+					: setCurrentCardIndex(blockchain_data.length - 1);
+			}
 		}
+
+		setShowDefault(false);
 	};
 
 	const [currentCardIndex, setCurrentCardIndex] = useState(0);
