@@ -3,6 +3,7 @@ import Header from "./components/Header.jsx";
 import Card from "./components/Card.jsx";
 import { useState } from "react";
 import blockchain_data from "./data/blockchain.js";
+import InputAnswer from "./components/InputAnswer.jsx";
 
 function App() {
 	// State to show default screen
@@ -49,6 +50,7 @@ function App() {
 					showAnswer={showAnswer}
 					switchCards={switchCards}
 				/>
+				<InputAnswer />
 			</div>
 		</>
 	);
