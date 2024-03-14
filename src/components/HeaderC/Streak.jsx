@@ -1,10 +1,11 @@
-const Streak = (props) => {
+const Streak = ({ streak, longestStreak }) => {
 	return (
 		<>
 			<div id="num-cards-div">
 				<p id="num-cards">
-					<span>{props.text}</span>
-					<span id="numCardsTxt">{props.numCards}</span>
+					<span>Current Streak: </span>
+					<span id="streak">{streak}</span>
+					<p id="longestStreak">Longest Streak: {longestStreak}</p>
 				</p>
 			</div>
 		</>
