@@ -13,6 +13,12 @@
 	font-size: 2rem;
 }
 
+#streak-inner {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+}
+
 #longestStreak {
 	color: black;
 }

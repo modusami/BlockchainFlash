@@ -1,12 +1,14 @@
 const Streak = ({ streak, longestStreak }) => {
 	return (
 		<>
-			<div id="num-cards-div">
-				<p id="num-cards">
-					<span>Current Streak: </span>
-					<span id="streak">{streak}</span>
-					<p id="longestStreak">Longest Streak: {longestStreak}</p>
-				</p>
+			<div id="streak-container">
+				<div id="streak-inner">
+					<div>
+						<span>Current Streak: </span>
+						<span id="streak">{streak}</span>
+					</div>
+					<span id="longestStreak">Longest Streak: {longestStreak}</span>
+				</div>
 			</div>
 		</>
 	);

@@ -28,6 +28,10 @@
 	box-shadow: 2px 2px 30px green;
 }
 
+#card.partial {
+	box-shadow: 2px 2px 30px rgb(255, 213, 0);
+}
+
 #card.wrong {
 	/* box-shadow: 2px 2px 10px red; */
 	animation: flashAnswerSignalRed 1s ease-in-out infinite;
