@@ -74,6 +74,10 @@ function App() {
 		setShowDefault(false);
 	};
 
+	const handleShuffe = (event) => {
+		console.log(event);
+	};
+
 	const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
 	return (
