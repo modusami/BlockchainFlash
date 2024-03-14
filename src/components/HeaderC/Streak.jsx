@@ -1,4 +1,4 @@
-const NumberOfCards = (props) => {
+const Streak = (props) => {
 	return (
 		<>
 			<div id="num-cards-div">
@@ -11,4 +11,4 @@ const NumberOfCards = (props) => {
 	);
 };
 
-export default NumberOfCards;
+export default Streak;
