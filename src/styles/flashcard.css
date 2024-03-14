@@ -132,3 +132,8 @@
 .back {
 	transform: rotateY(180deg);
 }
+
+#shuffle-div {
+	font-size: 2rem;
+	align-self: flex-end;
+}
