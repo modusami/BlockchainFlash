@@ -9,6 +9,9 @@ function App() {
 	const answers = blockchain_data.map((value) => value.answer);
 	const questions = blockchain_data.map((value) => value.question);
 
+	const [userStreak, setUserStreak] = useState(0);
+	const [longestStreak, setLongestStreak] = useState(0);
+
 	// State to show default screen
 	const [showDefault, setShowDefault] = useState(true);
 
@@ -35,8 +38,11 @@ function App() {
 		e.preventDefault();
 		if (answer.toLowerCase() == answers[currentCardIndex].toLowerCase()) {
 			setCorrectStatus("correct");
+			setUserStreak(userStreak + 1);
 		} else {
 			setCorrectStatus("wrong");
+			setLongestStreak(userStreak);
+			setUserStreak(0);
 		}
 		setShowAnswer(false);
 	};
@@ -70,7 +76,7 @@ function App() {
 		<>
 			<div id="shade-bg"></div>
 			<div id="container">
-				<Header currentCard={currentCardIndex} />
+				<Header userStreak={userStreak} longestStreak={longestStreak} />
 				<Card
 					showDefault={showDefault}
 					toggleCard={toggleCard}
