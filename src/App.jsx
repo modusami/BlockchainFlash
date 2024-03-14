@@ -41,7 +41,9 @@ function App() {
 			setUserStreak(userStreak + 1);
 		} else {
 			setCorrectStatus("wrong");
-			setLongestStreak(userStreak);
+			if (userStreak > 0) {
+				setLongestStreak(userStreak);
+			}
 			setUserStreak(0);
 		}
 		setShowAnswer(false);
