@@ -39,6 +39,8 @@ function App() {
 		if (answer.toLowerCase() == answers[currentCardIndex].toLowerCase()) {
 			setCorrectStatus("correct");
 			setUserStreak(userStreak + 1);
+		} else if (answers[currentCardIndex].toLowerCase().startsWith(answer.toLowerCase())) {
+			setCorrectStatus("partial");
 		} else {
 			setCorrectStatus("wrong");
 			if (userStreak > 0) {
