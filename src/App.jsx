@@ -4,6 +4,7 @@ import Card from "./components/Card.jsx";
 import { useState, useEffect } from "react";
 import blockchain_data from "./data/blockchain.js";
 import InputAnswer from "./components/InputAnswer.jsx";
+import ShuffleButton from "./components/ShuffleButton.jsx";
 
 function App() {
 	const answers = blockchain_data.map((value) => value.answer);
@@ -94,12 +95,16 @@ function App() {
 					answers={answers[currentCardIndex]}
 					isCorrect={correctStatus}
 				/>
-				<InputAnswer
-					answer={answer}
-					handleAnswer={handleAnswer}
-					handleSubmit={handleSubmit}
-					showBox={showInputBox}
-				/>
+				<div id="card-options">
+					<ShuffleButton handleShuffle={handleShuffe} />
+
+					<InputAnswer
+						answer={answer}
+						handleAnswer={handleAnswer}
+						handleSubmit={handleSubmit}
+						showBox={showInputBox}
+					/>
+				</div>
 			</div>
 		</>
 	);
