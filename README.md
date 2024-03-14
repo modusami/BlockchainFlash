@@ -24,8 +24,8 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
+-   [✅] Card is marked as partially right when user answer is slightly different than the actual answer
 -   [✅] Show input box after the introduction cards and hide it at intro screen
--   [ ] A count to show when the user reaches the first and last card of the stack
 
 ## Video Walkthrough
 
