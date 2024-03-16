@@ -5,7 +5,7 @@ const CardControls = ({ handleShuffe }) => {
 	return (
 		<div id="card-controls">
 			<div className="card-controls-inner">
-				<ShuffleButton handleShuffle={handleShuffe} /> <span id="divider">|</span>
+				<ShuffleButton handleShuffle={handleShuffe} />
 			</div>
 		</div>
 	);
