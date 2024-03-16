@@ -19,8 +19,7 @@ The following **optional** features are implemented:
 
 -   [✅] A shuffle button is used to randomize the order of the cards
 -   [✅] A user's answer may be counted as correct even when it is slightly different from the target answer
--   [✅]] A counter displays the user's current and longest streak of correct responses
--   [ ] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
+-   [✅] A counter displays the user's current and longest streak of correct responses
 
 The following **additional** features are implemented:
 
@@ -29,22 +28,17 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='/submission.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 
-GIF created with ...
-
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+GIF created with [Kap](https://getkap.co/) for macOS
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+No Significant Challenges
 
 ## License
 
