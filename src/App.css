@@ -14,12 +14,6 @@
 	padding: 1em;
 }
 
-#card-options {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 /* #btn {
 	padding: 10px;
 	margin-left: auto;

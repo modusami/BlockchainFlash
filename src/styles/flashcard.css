@@ -59,7 +59,6 @@
 
 .card-arrow {
 	font-size: 2rem;
-	cursor: pointer;
 	z-index: 8;
 }
 
@@ -75,6 +74,7 @@
 	width: 15%;
 	text-align: center;
 	padding: 1rem;
+	cursor: pointer;
 }
 
 #left-card-arrow {
@@ -131,9 +131,4 @@
 /* Style the back side */
 .back {
 	transform: rotateY(180deg);
-}
-
-#shuffle-div {
-	font-size: 2rem;
-	align-self: flex-end;
 }

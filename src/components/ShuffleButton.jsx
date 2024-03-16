@@ -1,7 +1,8 @@
 const ShuffleButton = ({ handleShuffle }) => {
 	return (
 		<div id="shuffle-div">
-			<i class="fa-solid fa-shuffle" onClick={handleShuffle}></i>
+			<i className="fa-solid fa-shuffle" onClick={handleShuffle}></i>
+			<span id="shuffle-cards-span">Shuffle Cards</span>
 		</div>
 	);
 };

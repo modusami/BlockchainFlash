@@ -18,10 +18,12 @@ const Card = (props) => {
 						{/* <img id="card-img" src={bitcoin} alt="bitcoin-image" /> */}
 						{props.showDefault
 							? "Click here to show the back of the card"
-							: props.questions}
+							: props.data.question}
 					</div>
 					<div className="back">
-						{props.showDefault ? "Click the Next Arrow below to begin" : props.answers}
+						{props.showDefault
+							? "Click the Next Arrow below to begin"
+							: props.data.answer}
 					</div>
 				</div>
 			</div>

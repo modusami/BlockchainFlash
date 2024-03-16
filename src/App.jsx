@@ -1,14 +1,14 @@
 import "./App.css";
 import Header from "./components/Header.jsx";
 import Card from "./components/Card.jsx";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import blockchain_data from "./data/blockchain.js";
 import InputAnswer from "./components/InputAnswer.jsx";
-import ShuffleButton from "./components/ShuffleButton.jsx";
+import CardControls from "./components/CardControls.jsx";
 
 function App() {
-	const answers = blockchain_data.map((value) => value.answer);
-	const questions = blockchain_data.map((value) => value.question);
+	// question and answers
+	const [data, setData] = useState(blockchain_data);
 
 	const [userStreak, setUserStreak] = useState(0);
 	const [longestStreak, setLongestStreak] = useState(0);
@@ -37,10 +37,11 @@ function App() {
 	const [correctStatus, setCorrectStatus] = useState("none");
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		if (answer.toLowerCase() == answers[currentCardIndex].toLowerCase()) {
+		const answers = data[currentCardIndex].answer;
+		if (answer.toLowerCase() == answers.toLowerCase()) {
 			setCorrectStatus("correct");
 			setUserStreak(userStreak + 1);
-		} else if (answers[currentCardIndex].toLowerCase().startsWith(answer.toLowerCase())) {
+		} else if (answers.toLowerCase().startsWith(answer.toLowerCase())) {
 			setCorrectStatus("partial");
 		} else {
 			setCorrectStatus("wrong");
@@ -76,7 +77,19 @@ function App() {
 	};
 
 	const handleShuffe = (event) => {
-		console.log(event);
+		event.stopPropagation();
+		if (!showDefault) {
+			var j, x, i;
+			const tempData = data.slice(0, data.length);
+			for (i = tempData.length - 1; i >= 0; i--) {
+				j = Math.floor(Math.random() * (i + 1));
+				x = tempData[i];
+				tempData[i] = tempData[j];
+				tempData[j] = x;
+			}
+			setCurrentCardIndex(0);
+			setData(tempData);
+		}
 	};
 
 	const [currentCardIndex, setCurrentCardIndex] = useState(0);
@@ -91,20 +104,18 @@ function App() {
 					toggleCard={toggleCard}
 					showAnswer={showAnswer}
 					switchCards={switchCards}
-					questions={questions[currentCardIndex]}
-					answers={answers[currentCardIndex]}
+					data={data[currentCardIndex]}
 					isCorrect={correctStatus}
 				/>
-				<div id="card-options">
-					<ShuffleButton handleShuffle={handleShuffe} />
 
-					<InputAnswer
-						answer={answer}
-						handleAnswer={handleAnswer}
-						handleSubmit={handleSubmit}
-						showBox={showInputBox}
-					/>
-				</div>
+				<InputAnswer
+					answer={answer}
+					handleAnswer={handleAnswer}
+					handleSubmit={handleSubmit}
+					showBox={showInputBox}
+				/>
+
+				<CardControls handleShuffe={handleShuffe} />
 			</div>
 		</>
 	);

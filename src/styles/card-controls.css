@@ -1,0 +1,38 @@
+/*
+<div id="card-controls">
+			<div className="card-controls-inner">
+				<ShuffleButton handleShuffle={handleShuffe} />
+			</div>
+		</div>
+
+*/
+
+#card-controls {
+	width: 100%;
+	font-size: 2rem;
+}
+
+.card-controls-inner {
+	width: 50%;
+	margin: 0 auto;
+	padding: 0 10px;
+	display: flex;
+}
+
+#divider {
+	margin: 0 5px;
+}
+
+#shuffle-cards-span {
+	font-size: 1.2rem;
+}
+
+#shuffle-div {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+#shuffle-div i {
+	cursor: pointer;
+}
